@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { Heroes } from './heroes/heroes';
 import { Messages } from './messages/messages';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [Heroes, Messages],
+  imports: [Messages, RouterModule],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
