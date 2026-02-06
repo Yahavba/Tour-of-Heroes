@@ -14,6 +14,10 @@ export const appConfig: ApplicationConfig = {
     provideBrowserGlobalErrorListeners(),
     provideRouter(routes),
     provideHttpClient(),
+
+    // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
+    // and returns simulated server responses.
+    // Remove it when a real server is ready to receive requests.
     importProvidersFrom(
       HttpClientInMemoryWebApiModule.forRoot(InMemoryData, {
         dataEncapsulation: false,

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { UpperCasePipe, Location } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+
 import { Hero } from '../hero';
 import { HeroService } from '../hero.service';
 

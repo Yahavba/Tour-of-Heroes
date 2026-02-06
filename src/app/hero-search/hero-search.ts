@@ -3,6 +3,7 @@ import { RouterLink } from '@angular/router';
 import { AsyncPipe } from '@angular/common';
 import { Observable, Subject } from 'rxjs';
 import { debounceTime, distinctUntilChanged, switchMap } from 'rxjs/operators';
+
 import { Hero } from '../hero';
 import { HeroService } from '../hero.service';
 
@@ -18,11 +19,6 @@ export class HeroSearch implements OnInit {
 
   constructor(private heroService: HeroService) {}
 
-  // Push a search term into the observable stream.
-  search(term: string): void {
-    this.searchTerms.next(term);
-  }
-
   ngOnInit(): void {
     this.heroes$ = this.searchTerms.pipe(
       // wait 300ms after each keystroke before considering the term
@@ -34,5 +30,10 @@ export class HeroSearch implements OnInit {
       // ignore new term if same as previous term
       switchMap((term: string) => this.heroService.searchHeroes(term)),
     );
+  }
+
+  // Push a search term into the observable stream.
+  search(term: string): void {
+    this.searchTerms.next(term);
   }
 }
