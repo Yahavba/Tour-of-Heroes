@@ -1,59 +1,52 @@
-# TourOfHeroes
+# Tour of Heroes ⚔️
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.2.
+This repository contains my implementation of the official **Angular Tour of Heroes** tutorial.
 
-## Development server
+You can read the full project specification and tutorial here:
+ [Official Angular Tour of Heroes Tutorial](https://v17.angular.io/tutorial/tour-of-heroes).
 
-To start a local development server, run:
+## ⚡ About This Implementation
 
-```bash
-ng serve
-```
+This project is based on the official tutorial but has been updated to run on **Angular 21+**.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+It leverages the latest framework features including:
 
-## Code scaffolding
+* **Standalone Components** (No NgModules)
+* **New Control Flow:** Using `@for` and `@if` instead of `*ngFor` and `*ngIf`.
+* **Modern RxJS Integration** (Observables & Subjects)
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 📋 Prerequisites
 
-```bash
-ng generate component component-name
-```
+Before you begin, ensure you have the following installed on your machine:
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+* **Node.js:** Latest LTS version (Recommended).
+    * [Download Node.js](https://nodejs.org/)
+* **npm:** Typically comes installed with Node.js.
+* **Angular CLI:** (Optional, if you want to run `ng` commands directly)
+    * `npm install -g @angular/cli`
 
-```bash
-ng generate --help
-```
+## 🛠️ How to Run
 
-## Building
+1. **Clone this repository:**
+    ```bash
+    git clone https://github.com/Yahavba/Tour-of-Heroes.git
+    cd Tour-of-Heroes
+    ```
 
-To build the project run:
+2. **Install dependencies:**
+    ```bash
+    npm install
+    # If needed due to version mismatch:
+    npm install --legacy-peer-deps
+    ```
 
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+3. **Start the development server:**
+    * **Using npm:**
+        ```bash
+        npm start
+        ```
+    * **Using Angular CLI:**
+        ```bash
+        ng serve --open
+        ```
+    The app will run at http://localhost:4200/.
